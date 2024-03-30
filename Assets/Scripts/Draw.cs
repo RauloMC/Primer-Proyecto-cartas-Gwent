@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Draw : MonoBehaviour
 {
     public GameObject Hand;
-    public GameObject Card;
     public List<GameObject> CardsInHands;
+    public List<GameObject> Deck;
 
     // Start is called before the first frame update
     void Start()
@@ -16,16 +16,31 @@ public class NewBehaviourScript : MonoBehaviour
     }
     
     public void OnClick()
+
     {
-        // Instantiate the card as a child of the hand
-        GameObject cardInHand = GameObject.Instantiate(Card, Hand.transform.position, Quaternion.identity, Hand.transform);
-        
-        // Add the instantiated card to the list
-        CardsInHands.Add(cardInHand);
+         if(CardsInHands.Count >= 12)
+        {
+            Debug.Log("Hand is full. you cannot add more cards.");
+        }
+
+        if(Deck.Count > 0)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, Deck.Count);
+            GameObject cardToDraw = Deck[randomIndex];
+
+            if(CardsInHands.Count<12)
+            {
+                 GameObject newCard = Instantiate(cardToDraw, Hand.transform.position, Quaternion.identity, Hand.transform);
+            CardsInHands.Add(newCard);
+
+            Deck.RemoveAt(randomIndex);
+ 
+            }       
+        }
+        else
+        {
+            Debug.Log("The Deck is empty.");
+        }   
     }
 }
- /*// Update is called once per frame
-    void Update()
-    {
-        
-    }*/
+ 
