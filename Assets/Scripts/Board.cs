@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Tablero : MonoBehaviour
 {
@@ -115,6 +115,9 @@ public class Tablero : MonoBehaviour
             {
                 Debug.LogError("El prefab de la carta no contiene un CardComponent.");
             }
+
+            // Notificar al GameManager que se ha colocado una carta
+            OnCardPlaced?.Invoke(card, playerZone);
         }
         else
         {
@@ -132,4 +135,7 @@ public class Tablero : MonoBehaviour
         Debug.LogError("Zona no encontrada: " + playerZone);
         return null;
     }
+
+    public delegate void CardPlacedHandler(Card card, string playerZone);
+    public event CardPlacedHandler OnCardPlaced;
 }

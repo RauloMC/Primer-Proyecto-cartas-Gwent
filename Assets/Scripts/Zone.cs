@@ -10,4 +10,6 @@ public class Zone : MonoBehaviour
     {
         OnCardPlaced?.Invoke(card, zoneType);
     }
+
+    
 }

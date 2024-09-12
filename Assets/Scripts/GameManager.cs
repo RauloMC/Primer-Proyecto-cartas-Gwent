@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public Player player1; // Referencia al jugador 1
     public Player player2; // Referencia al jugador 2
     public Mulligan mulliganUIManager; // Referencia al manejador de UI de Mulligan
+    public Tablero tablero; // Referencia al tablero
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
         player2NameText = player2Panel.transform.Find("NombreJ2").GetComponent<TMP_Text>();
         player2Image = player2Panel.transform.Find("FotoJugador2").GetComponent<Image>();
         player2ScoreText = player2Panel.transform.Find("PuntuacionJ2").GetComponent<TMP_Text>();
+
     }
 
     private void Start()
@@ -64,4 +66,7 @@ public class GameManager : MonoBehaviour
         player2Image.sprite = player2Info.Photo;
         player2ScoreText.text = "Score: 0"; // Inicia la puntuación
     }
+
+   
 }
+

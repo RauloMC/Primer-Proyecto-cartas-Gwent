@@ -5,11 +5,9 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    public int CurrentScore { get; private set; }
     public string Name;
     public Sprite Photo;
     public TMP_Text nameText;
-    public TMP_Text scoreText;
     public Image photoImage;
 
     public List<Card> hand = new List<Card>(); // La mano del jugador
@@ -30,7 +28,7 @@ public class Player : MonoBehaviour
         {
             hand.Add(card);
             UpdateHandUI();
-            mulliganManager.ManageMulligan(); // Revisa el estado del mulligan cada vez que se añade una carta
+            //mulliganManager.ManageMulligan(); // Revisa el estado del mulligan cada vez que se añade una carta
         }
         else
         {
@@ -107,35 +105,14 @@ public class Player : MonoBehaviour
         {
             nameText.text = Name;
         }
-        UpdateScoreUI();
         if (photoImage != null)
         {
             photoImage.sprite = Photo;
         }
     }
 
-    public void AddScore(int points)
+    public int GetHandCardCount()
     {
-        CurrentScore += points;
-        UpdateScoreUI();
-    }
-
-    public void UpdateScoreUI()
-    {
-        if (scoreText != null)
-        {
-            scoreText.text = "Score: " + CurrentScore;
-            Debug.Log($"UI Score Updated: {scoreText.text}");
-        }
-    }
-
-
-    public void ResetScore()
-    {
-        CurrentScore = 0;
-        UpdateScoreUI();
-    }
-    public int GetHandCardCount(){
         return hand.Count;
     }
 }

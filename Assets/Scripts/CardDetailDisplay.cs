@@ -13,7 +13,7 @@ public class CardDetailDisplay : MonoBehaviour
     {
         cardImage.sprite = image;
         cardName.text = name;
-        cardCost.text = "Costo: " + cost.ToString();
+        cardCost.text = "Score: " + cost.ToString();
         cardDescription.text = description;
         gameObject.SetActive(true);
     }

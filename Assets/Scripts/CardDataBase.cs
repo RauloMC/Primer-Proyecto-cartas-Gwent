@@ -45,5 +45,47 @@ public class CardDataBase : MonoBehaviour
         // Increase
         cardList.Add(new Card(23, "Cáliz", 4, 7, "Triwizard Tournament trophy", Resources.Load<Sprite>("Sprites/RedDeck/Goblet"), Faction.Gryffindor, CardType.Increase, AttackType.I, SpecialAbility.IncreaseEffect));
         cardList.Add(new Card(24, "Snitch", 1, 4, "Golden flying ball in Quidditch", Resources.Load<Sprite>("Sprites/RedDeck/Snitch"), Faction.Gryffindor, CardType.Increase, AttackType.I, SpecialAbility.IncreaseEffect));
+
+        //DeckNo.2
+      
+        // Líder
+        cardList.Add(new Card(25, "Voldemort", 7, 6, "Most Feared", Resources.Load<Sprite>("Sprites/Greendeck/voldemort"), Faction.Slytherin, CardType.Leader, AttackType.L, SpecialAbility.MultiplyAttack));
+
+        // Héroes
+        cardList.Add(new Card(26, "Draco", 4, 6, "Young Slytherin", Resources.Load<Sprite>("Sprites/Greendeck/draco"), Faction.Slytherin, CardType.Hero, AttackType.MR, SpecialAbility.ClearRow));
+        cardList.Add(new Card(27, "Snape", 4, 7, "Complex and enigmatic Hogwarts professor", Resources.Load<Sprite>("Sprites/Greendeck/snape"), Faction.Slytherin, CardType.Hero, AttackType.MRS, SpecialAbility.AveragePower));
+        cardList.Add(new Card(28, "Lucius", 4, 6, "Aristocratic Death Eater", Resources.Load<Sprite>("Sprites/Greendeck/lucius"), Faction.Slytherin, CardType.Hero, AttackType.MR, SpecialAbility.RemoveHighestPower));
+        cardList.Add(new Card(29, "Bellatrix", 4, 7, "Crazed Death Eater", Resources.Load<Sprite>("Sprites/Greendeck/bellatrix"), Faction.Slytherin, CardType.Hero, AttackType.MRS, SpecialAbility.MultiplyAttack));
+        cardList.Add(new Card(30, "Narcissa", 3, 6, "Protective Mother", Resources.Load<Sprite>("Sprites/Greendeck/narcissa"), Faction.Slytherin, CardType.Hero, AttackType.RS, SpecialAbility.IncreaseRow));
+
+        //Plata
+        cardList.Add(new Card(31, "Aragog", 2, 5, "Giant Spider", Resources.Load<Sprite>("Sprites/Greendeck/aragog"), Faction.Slytherin, CardType.Silver, AttackType.M, SpecialAbility.CallWeather));
+        cardList.Add(new Card(32, "Nagini", 2, 5, "Voldemort's Snake", Resources.Load<Sprite>("Sprites/Greendeck/nagini"), Faction.Slytherin, CardType.Silver, AttackType.M, SpecialAbility.None));
+        cardList.Add(new Card(33, "Dementor", 3, 4, "Dark Creature", Resources.Load<Sprite>("Sprites/Greendeck/dementor"), Faction.Slytherin, CardType.Silver, AttackType.M, SpecialAbility.RemoveLowestPower));
+        cardList.Add(new Card(34, "Peter Petegrew", 3, 5, "Betrayer", Resources.Load<Sprite>("Sprites/Greendeck/PeterPetegrew"), Faction.Slytherin, CardType.Silver, AttackType.R, SpecialAbility.DecoyEffect));
+        cardList.Add(new Card(35, "Tom Riddle", 4, 6, "Young Voldemort", Resources.Load<Sprite>("Sprites/Greendeck/tom_riddle"), Faction.Slytherin, CardType.Silver, AttackType.S, SpecialAbility.RemoveHighestPower));
+        cardList.Add(new Card(36, "Barty Crouch", 3, 5, "Barty Crouch", Resources.Load<Sprite>("Sprites/Greendeck/Crouch"), Faction.Slytherin, CardType.Silver, AttackType.MR, SpecialAbility.None));
+        cardList.Add(new Card(37, "Avada Kedavra", 2, 5, "Dark Arts Spell", Resources.Load<Sprite>("Sprites/Greendeck/magic"), Faction.Slytherin, CardType.Decoy, AttackType.DevolverCarta, SpecialAbility.None));
+        cardList.Add(new Card(38, "Dolores Umbridge", 3, 5, "Umbridge", Resources.Load<Sprite>("Sprites/Greendeck/umbridge"), Faction.Slytherin, CardType.Silver, AttackType.M, SpecialAbility.RemoveLowestPower));
+        cardList.Add(new Card(39, "Salazar Slytherin", 6, 7, "Founder of Slytherin", Resources.Load<Sprite>("Sprites/Greendeck/Salazar"), Faction.Slytherin, CardType.Increase, AttackType.R, SpecialAbility.IncreaseEffect));
+        //Decoy
+        cardList.Add(new Card(40, "Caldero", 3, 6, "Magical Potion", Resources.Load<Sprite>("Sprites/Greendeck/Cauldron"), Faction.Slytherin, CardType.Decoy, AttackType.DevolverCarta, SpecialAbility.None));
+        cardList.Add(new Card(41, "Marca Tenebrosa", 3, 6, "Dark Mark", Resources.Load<Sprite>("Sprites/Greendeck/mark"), Faction.Slytherin, CardType.Decoy, AttackType.DevolverCarta, SpecialAbility.DecoyEffect));
+        cardList.Add(new Card(42, "Toilette de chicas", 3, 5, "Hogwarts Student", Resources.Load<Sprite>("Sprites/Greendeck/Bathroom"), Faction.Slytherin, CardType.Silver, AttackType.DevolverCarta, SpecialAbility.None));
+
+
+        //Weather
+        cardList.Add(new Card(43, "Camara de los scretos", 4, 6, "Chamber of Secrets", Resources.Load<Sprite>("Sprites/Greendeck/Chamber"), Faction.Slytherin, CardType.Weather, AttackType.C, SpecialAbility.WeatherEffectRain));
+        cardList.Add(new Card(44, "Mazmorras", 3, 5, "Slytherin Dungeons", Resources.Load<Sprite>("Sprites/Greendeck/dungeons"), Faction.Slytherin, CardType.Weather, AttackType.C, SpecialAbility.WeatherEffectFog));
+        cardList.Add(new Card(45, "Bosque Prohibido", 3, 5, "Forbidden Forest", Resources.Load<Sprite>("Sprites/Greendeck/forest"), Faction.Slytherin, CardType.Weather, AttackType.C, SpecialAbility.WeatherEffectFrost));
+
+        //Increase
+        cardList.Add(new Card(46, "Mapa", 3, 5, "Magical Map", Resources.Load<Sprite>("Sprites/Greendeck/Map"), Faction.Slytherin, CardType.Weather, AttackType.I, SpecialAbility.IncreaseEffect));
+        cardList.Add(new Card(47, "Copa de Slytherin", 5, 7, "Slytherin Coup", Resources.Load<Sprite>("Sprites/Greendeck/SlytherinCoup"), Faction.Slytherin, CardType.Increase, AttackType.I, SpecialAbility.IncreaseEffect));
+
+        //Clearing
+        cardList.Add(new Card(48, "Toilette de Slytherin", 4, 6, "Chamber of Secrets", Resources.Load<Sprite>("Sprites/Greendeck/SlytherinBath"), Faction.Slytherin, CardType.Clearing, AttackType.DespejarClima, SpecialAbility.ClearingEffect));
+        cardList.Add(new Card(59, "Basilisco", 1, 4, "Magical Creature", Resources.Load<Sprite>("Sprites/Greendeck/snake"), Faction.Slytherin, CardType.Silver, AttackType.DespejarClima, SpecialAbility.None));
+
     }  
 }

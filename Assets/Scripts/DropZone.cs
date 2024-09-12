@@ -3,7 +3,6 @@ using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler
 {
-    // Tipo de ataque permitido en esta zona
     public AttackType zoneType; 
 
     public void OnDrop(PointerEventData eventData)

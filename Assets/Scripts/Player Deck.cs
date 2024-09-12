@@ -1,55 +1,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using TMPro;
 
 public class PlayerDeck : MonoBehaviour, IPointerClickHandler
 {
-    public GameObject cardPrefab; 
-    public Transform cardZone;  
-    public int maxCardsToDraw = 10;  
-    public Player player; 
+    public GameObject cardPrefab;
+    public Transform cardZone;
+    public int maxCardsToDraw = 10;
+    public Player player; // Asume que player tiene una propiedad "Name" para identificar al jugador
 
-    private List<Card> deck = new List<Card>();
-    private int cardsDrawn = 0;  
+    private List<Card> deck = new List<Card>(); 
+    private int cardsDrawn = 0;
+
     void Start()
     {
         ResetDeck();
     }
-    
 
     void ResetDeck()
-{
-    // Asegúrate de que la base de datos de cartas esté inicializada
-    if (CardDataBase.cardList != null && CardDataBase.cardList.Count > 0)
     {
-        Debug.Log("Card list is initialized with " + CardDataBase.cardList.Count + " cards.");
-
-        // Crear un conjunto para almacenar las cartas únicas
-        HashSet<Card> uniqueCards = new HashSet<Card>();
-
-        // Llenar el mazo con cartas únicas
-        while (uniqueCards.Count < 25)
+        // Asegúrate de que la base de datos de cartas esté inicializada
+        if (CardDataBase.cardList != null && CardDataBase.cardList.Count > 0)
         {
-            Card cardToAdd = CardDataBase.cardList[Random.Range(0, CardDataBase.cardList.Count)];
-            if (cardToAdd != null)
+            Debug.Log("Card list is initialized with " + CardDataBase.cardList.Count + " cards.");
+            
+            // Llena el mazo con cartas filtradas por facción según el jugador
+            if (player.Name == "Player1")
             {
-                uniqueCards.Add(cardToAdd);
+                // Jugador 1 solo toma cartas de Gryffindor
+                deck = CardDataBase.cardList.FindAll(card => card.CardFaction == Faction.Gryffindor);
             }
+            else if (player.Name == "Player2")
+            {
+                // Jugador 2 solo toma cartas de Slytherin
+                deck = CardDataBase.cardList.FindAll(card => card.CardFaction == Faction.Slytherin);
+            }
+            
+            // Mezclar el mazo
+            ShuffleDeck();
         }
-
-        // Convertir el conjunto a una lista y asignarla al mazo
-        deck = new List<Card>(uniqueCards);
-
-        ShuffleDeck();
+        else
+        {
+            Debug.LogError("CardDataBase.cardList is null or empty.");
+        }
     }
-    else
-    {
-        Debug.LogError("CardDataBase.cardList is null or empty.");
-    }
-}
-
 
     void ShuffleDeck()
     {
@@ -139,9 +133,5 @@ public class PlayerDeck : MonoBehaviour, IPointerClickHandler
         {
             dragHandler = cardObject.AddComponent<CardDragHandler>();
         }
-
-    // Instanciar el prefab de la carta en el contenedor de la mano
-    // Inicializar los datos de la carta
-    cardComponent.Initialize(card);
     }
 }

@@ -39,7 +39,6 @@ public class OpcionesMenu : MonoBehaviour
 
     public void VolverAlMenuPrincipal()
     {
-        // Cargar la escena del menú principal
         SceneManager.LoadScene("Menu Principal");
     }
 }
