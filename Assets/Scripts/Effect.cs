@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Effect : MonoBehaviour
 {
@@ -61,8 +62,45 @@ public class Effect : MonoBehaviour
     private void ApplyNone(Card card){}
     private void ApplyDecoyEffect(Card card)
     {
-        Debug.Log("Aplicando efecto de Decoy: " + card.CardName);
+        // Verifica si la carta es un Decoy
+        if (card.Type != CardType.Decoy)
+        {
+            Debug.LogWarning("La carta no es un Decoy.");
+            return;
+        }
+
+        // Obtén la zona donde se colocó la carta Decoy
+        DropZone dropZone = FindObjectOfType<DropZone>();
+        if (dropZone != null)
+        {
+            List<CardComponent> cardsInZone = dropZone.GetCardsInZone();
+
+            // Filtra las cartas de tipo Unidad en la zona
+            List<CardComponent> unitCards = cardsInZone.FindAll(c => c.unitType == Unidad.Unidad);
+
+            if (unitCards.Count == 1)
+
+            {
+                CardComponent unitCard = unitCards[0];
+                ReturnCardToHand(unitCard);
+                //carta de tipo Unidad, devuélvela a la mano
+                Debug.Log("Devolviendo la carta de tipo Unidad a la mano.");
+                // Aquí  implementar la lógica para devolver la carta a la mano del jugador
+            }
+            else if (unitCards.Count > 1)
+            {
+                // Hay múltiples cartas de tipo Unidad, permite al jugador elegir
+                Debug.Log("Selecciona una carta de tipo Unidad para devolver.");
+                // Aquí implementar la lógica para permitir al jugador elegir una carta
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró DropZone.");
+        }
     }
+
+
 
     private void ApplyClearingEffect(Card card)
     {
@@ -128,4 +166,26 @@ public class Effect : MonoBehaviour
     {
         Debug.Log("Aplicando efecto de IncreaseRow: " + card.CardName);
     }
+
+    private void ReturnCardToHand(CardComponent card)
+    {
+        Player player = FindObjectOfType<Player>();
+        if (player != null)
+        {
+            if (card.unitType == Unidad.Unidad)
+            {
+                ///player.AddCardToHand(card);
+                //Debug.Log("Carta devuelta a la mano del jugador: " + card.CardName);
+            }
+            else
+            {
+                Debug.LogWarning("La carta seleccionada no es de tipo Unidad.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró el objeto Player en la escena.");
+        }
+    }
+
 }

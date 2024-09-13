@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CardClickHandler : MonoBehaviour, IPointerClickHandler
-{
+public class CardClickHandler : MonoBehaviour, IPointerClickHandler{
+
     // Variables asignadas en el Inspector
-    public Sprite cardImage;        
+    public Sprite cardImage;      
     public string cardName;        
     public int cardCost;            
     public string cardDescription;  

@@ -28,13 +28,13 @@ public class Player : MonoBehaviour
         {
             hand.Add(card);
             UpdateHandUI();
-            //mulliganManager.ManageMulligan(); // Revisa el estado del mulligan cada vez que se añade una carta
         }
         else
         {
             Debug.Log("La mano está llena, no se puede añadir más cartas.");
         }
     }
+
 
     public void DrawInitialCards()
     {
@@ -115,4 +115,6 @@ public class Player : MonoBehaviour
     {
         return hand.Count;
     }
+
+    
 }

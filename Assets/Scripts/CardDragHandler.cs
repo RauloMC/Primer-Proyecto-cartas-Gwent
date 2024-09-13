@@ -36,26 +36,35 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             var dropZone = eventData.pointerCurrentRaycast.gameObject.GetComponent<DropZone>();
             if (dropZone != null)
             {
-                // Verifica si la carta puede ser colocada en la zona
-                if (dropZone.CanPlaceCard(cardComponent.cardData))
+                // Verifica si la carta puede ser colocada en la zona usando CardComponent
+                if (cardComponent != null && cardComponent.cardData != null)
                 {
-                    transform.SetParent(dropZone.transform); // Cambia el padre de la carta a la zona de juego
-                    transform.localPosition = Vector3.zero; // Alinear la carta al centro de la zona
-
-                    // Activar el efecto de la carta en la zona
-                    Effect effectManager = FindObjectOfType<Effect>(); // Encontrar el objeto Effect en la escena
-                    if (effectManager != null)
+                    if (dropZone.CanPlaceCard(cardComponent)) // Usa CardComponent directamente
                     {
-                        effectManager.ApplyEffect(cardComponent.cardData);
+                        transform.SetParent(dropZone.transform); // Cambia el padre de la carta a la zona de juego
+                        transform.localPosition = Vector3.zero; // Alinear la carta al centro de la zona
+
+                        // Activar el efecto de la carta en la zona
+                        Effect effectManager = FindObjectOfType<Effect>(); // Encontrar el objeto Effect en la escena
+                        if (effectManager != null)
+                        {
+                            effectManager.ApplyEffect(cardComponent.cardData);
+                        }
+                        else
+                        {
+                            Debug.LogWarning("No se encontró un objeto Effect en la escena.");
+                        }
                     }
                     else
                     {
-                        Debug.LogWarning("No se encontró un objeto Effect en la escena.");
+                        // Si la carta no puede ser colocada en la zona, vuelve a su posición original
+                        transform.position = originalPosition;
+                        transform.SetParent(originalParent);
                     }
                 }
                 else
                 {
-                    // Si la carta no puede ser colocada en la zona, vuelve a su posición original
+                    Debug.LogError("CardComponent o cardData no están asignados correctamente.");
                     transform.position = originalPosition;
                     transform.SetParent(originalParent);
                 }
@@ -68,6 +77,7 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             transform.SetParent(originalParent);
         }
     }
+
 
     private bool IsPointerOverDropZone(PointerEventData eventData)
     {

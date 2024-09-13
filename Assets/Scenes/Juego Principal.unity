@@ -223,6 +223,139 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1796245037}
   m_SourcePrefab: {fileID: 100100000, guid: 09be7803a73a56b70b707ff42fb24911, type: 3}
+--- !u!1 &40377370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40377371}
+  - component: {fileID: 40377374}
+  - component: {fileID: 40377373}
+  - component: {fileID: 40377372}
+  m_Layer: 5
+  m_Name: Pass button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &40377371
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40377370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1323880082}
+  m_Father: {fileID: 1166541940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -164, y: -307}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &40377372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40377370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 40377373}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 2e28be5c9765f056ea86a9e62a89157f, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &40377373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40377370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &40377374
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40377370}
+  m_CullTransparentMesh: 1
 --- !u!1 &74927209
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,8 +579,8 @@ GameObject:
   - component: {fileID: 154359931}
   - component: {fileID: 154359930}
   - component: {fileID: 154359929}
-  - component: {fileID: 154359933}
   - component: {fileID: 154359934}
+  - component: {fileID: 154359935}
   m_Layer: 5
   m_Name: CuerpoACuerpoJ2
   m_TagString: DropZone
@@ -497,7 +630,7 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!114 &154359930
@@ -512,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 154359935}
   zoneType: 0
 --- !u!114 &154359931
 MonoBehaviour:
@@ -526,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -551,19 +685,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154359927}
   m_CullTransparentMesh: 1
---- !u!114 &154359933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154359927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoneType: M
 --- !u!61 &154359934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -609,6 +730,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &154359935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154359927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &256643166
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,8 +891,8 @@ GameObject:
   - component: {fileID: 327928841}
   - component: {fileID: 327928840}
   - component: {fileID: 327928839}
-  - component: {fileID: 327928843}
   - component: {fileID: 327928844}
+  - component: {fileID: 327928845}
   m_Layer: 5
   m_Name: AtaqueDistanciaJ2
   m_TagString: DropZone
@@ -809,7 +942,7 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!114 &327928840
@@ -824,6 +957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 327928845}
   zoneType: 1
 --- !u!114 &327928841
 MonoBehaviour:
@@ -838,7 +972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -863,19 +997,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327928837}
   m_CullTransparentMesh: 1
---- !u!114 &327928843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327928837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoneType: R
 --- !u!61 &327928844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -921,6 +1042,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &327928845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327928837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &377612839
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +1067,6 @@ GameObject:
   - component: {fileID: 377612841}
   - component: {fileID: 377612843}
   - component: {fileID: 377612844}
-  - component: {fileID: 377612846}
   - component: {fileID: 377612845}
   m_Layer: 5
   m_Name: AumentoCuerpoACuerpoJ1
@@ -975,7 +1107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1012,6 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 377612845}
   zoneType: 9
 --- !u!114 &377612844
 MonoBehaviour:
@@ -1032,59 +1165,14 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!61 &377612845
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377612839}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &377612846
+--- !u!114 &377612845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1093,10 +1181,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 377612839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneType: I
 --- !u!1 &428842558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,8 +2034,8 @@ GameObject:
   - component: {fileID: 653488745}
   - component: {fileID: 653488747}
   - component: {fileID: 653488748}
-  - component: {fileID: 653488750}
   - component: {fileID: 653488749}
+  - component: {fileID: 653488750}
   m_Layer: 5
   m_Name: AumentoAsedioJ1
   m_TagString: DropZone
@@ -1988,7 +2075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2025,6 +2112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 0}
   zoneType: 9
 --- !u!114 &653488748
 MonoBehaviour:
@@ -2106,10 +2194,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 653488743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneType: I
 --- !u!1 &657645573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2291,7 @@ MonoBehaviour:
   cardZone: {fileID: 6318469999282821945}
   maxCardsToDraw: 10
   player: {fileID: 1043810136}
+  canPlayCards: 1
 --- !u!65 &657645578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2253,8 +2341,8 @@ GameObject:
   - component: {fileID: 664925684}
   - component: {fileID: 664925683}
   - component: {fileID: 664925682}
-  - component: {fileID: 664925687}
   - component: {fileID: 664925686}
+  - component: {fileID: 664925687}
   m_Layer: 5
   m_Name: ClimaJ2
   m_TagString: DropZone
@@ -2319,6 +2407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 664925687}
   zoneType: 7
 --- !u!114 &664925684
 MonoBehaviour:
@@ -2412,10 +2501,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 664925680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneType: C
 --- !u!1 &698199519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,8 +2561,8 @@ GameObject:
   - component: {fileID: 727503580}
   - component: {fileID: 727503582}
   - component: {fileID: 727503583}
-  - component: {fileID: 727503585}
   - component: {fileID: 727503584}
+  - component: {fileID: 727503585}
   m_Layer: 5
   m_Name: AsedioJ1
   m_TagString: DropZone
@@ -2514,7 +2602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2551,6 +2639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 727503585}
   zoneType: 2
 --- !u!114 &727503583
 MonoBehaviour:
@@ -2632,10 +2721,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 727503578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneType: S
 --- !u!1 &733950812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,8 +2812,8 @@ GameObject:
   - component: {fileID: 749906714}
   - component: {fileID: 749906713}
   - component: {fileID: 749906716}
-  - component: {fileID: 749906717}
   - component: {fileID: 749906718}
+  - component: {fileID: 749906719}
   m_Layer: 5
   m_Name: AumentoCuerpoACuerpoJ2
   m_TagString: DropZone
@@ -2764,6 +2852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 749906719}
   zoneType: 9
 --- !u!114 &749906714
 MonoBehaviour:
@@ -2778,7 +2867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2822,26 +2911,13 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &749906717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749906711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoneType: I
 --- !u!61 &749906718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2887,6 +2963,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &749906719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749906711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &804047008
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,8 +3268,8 @@ GameObject:
   - component: {fileID: 953347386}
   - component: {fileID: 953347388}
   - component: {fileID: 953347389}
-  - component: {fileID: 953347391}
   - component: {fileID: 953347390}
+  - component: {fileID: 953347391}
   m_Layer: 5
   m_Name: LiderJ1
   m_TagString: DropZone
@@ -3221,7 +3309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3258,6 +3346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 0}
   zoneType: 8
 --- !u!114 &953347389
 MonoBehaviour:
@@ -3339,10 +3428,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 953347384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneType: L
 --- !u!1 &1043810131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,8 +3714,8 @@ GameObject:
   - component: {fileID: 1062321689}
   - component: {fileID: 1062321688}
   - component: {fileID: 1062321691}
-  - component: {fileID: 1062321692}
   - component: {fileID: 1062321693}
+  - component: {fileID: 1062321694}
   m_Layer: 5
   m_Name: LiderJ2
   m_TagString: DropZone
@@ -3666,6 +3754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 1062321694}
   zoneType: 8
 --- !u!114 &1062321689
 MonoBehaviour:
@@ -3680,7 +3769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3731,19 +3820,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1062321692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062321686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoneType: L
 --- !u!61 &1062321693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3789,6 +3865,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1062321694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062321686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1097469152 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7462273539762145246, guid: e22af2d9a5a85267a9f5a1b639e2476a, type: 3}
@@ -3807,8 +3895,8 @@ GameObject:
   - component: {fileID: 1099547587}
   - component: {fileID: 1099547589}
   - component: {fileID: 1099547590}
-  - component: {fileID: 1099547592}
   - component: {fileID: 1099547591}
+  - component: {fileID: 1099547592}
   m_Layer: 5
   m_Name: AtaqueDistanciaJ1
   m_TagString: DropZone
@@ -3848,7 +3936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3885,6 +3973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 1099547592}
   zoneType: 1
 --- !u!114 &1099547590
 MonoBehaviour:
@@ -3966,10 +4055,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099547585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneType: R
 --- !u!1 &1159364964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,6 +4207,7 @@ GameObject:
   - component: {fileID: 1166541942}
   - component: {fileID: 1166541941}
   - component: {fileID: 1166541944}
+  - component: {fileID: 1166541945}
   m_Layer: 5
   m_Name: PANEL GENERAL
   m_TagString: Untagged
@@ -4140,6 +4229,7 @@ RectTransform:
   m_Children:
   - {fileID: 1043810132}
   - {fileID: 1744839214}
+  - {fileID: 40377371}
   m_Father: {fileID: 1779658880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4240,6 +4330,22 @@ MonoBehaviour:
   zonaCementerioJ2: {fileID: 1371901805}
   zonaLiderJ2: {fileID: 1062321687}
   zonaClimaComun: {fileID: 664925681}
+--- !u!114 &1166541945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166541939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e28be5c9765f056ea86a9e62a89157f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Deck: {fileID: 657645577}
+  player2Deck: {fileID: 1211187499}
+  passButton: {fileID: 40377372}
+  roundText: {fileID: 0}
 --- !u!1 &1168503643
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,8 +4359,8 @@ GameObject:
   - component: {fileID: 1168503645}
   - component: {fileID: 1168503647}
   - component: {fileID: 1168503648}
-  - component: {fileID: 1168503650}
   - component: {fileID: 1168503649}
+  - component: {fileID: 1168503650}
   m_Layer: 5
   m_Name: AumentoAtaqueDistanciaJ1
   m_TagString: DropZone
@@ -4294,7 +4400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4331,6 +4437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 0}
   zoneType: 9
 --- !u!114 &1168503648
 MonoBehaviour:
@@ -4412,10 +4519,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1168503643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneType: I
 --- !u!1 &1185410305
 GameObject:
   m_ObjectHideFlags: 0
@@ -4628,6 +4734,7 @@ MonoBehaviour:
   cardZone: {fileID: 1796245036}
   maxCardsToDraw: 10
   player: {fileID: 1744839217}
+  canPlayCards: 1
 --- !u!114 &1211187500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5122,6 +5229,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321649924}
   m_CullTransparentMesh: 1
+--- !u!1 &1323880081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1323880082}
+  - component: {fileID: 1323880084}
+  - component: {fileID: 1323880083}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1323880082
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323880081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 40377371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1323880083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323880081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Pasar
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1323880084
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323880081}
+  m_CullTransparentMesh: 1
 --- !u!1 &1327584414
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,8 +5718,8 @@ GameObject:
   - component: {fileID: 1491773590}
   - component: {fileID: 1491773589}
   - component: {fileID: 1491773592}
-  - component: {fileID: 1491773593}
   - component: {fileID: 1491773594}
+  - component: {fileID: 1491773595}
   m_Layer: 5
   m_Name: AumentoAsedioJ2
   m_TagString: DropZone
@@ -5517,6 +5758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 1491773595}
   zoneType: 9
 --- !u!114 &1491773590
 MonoBehaviour:
@@ -5531,7 +5773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5575,26 +5817,13 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1491773593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491773587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoneType: I
 --- !u!61 &1491773594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5640,6 +5869,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1491773595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491773587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1506916657
 GameObject:
   m_ObjectHideFlags: 0
@@ -6701,6 +6942,7 @@ MonoBehaviour:
     Type: 0
     Attack: 0
     Ability: 0
+    UnitType: 0
   maxHandSize: 10
   selectedCardsForMulligan: []
 --- !u!1 &1779658879
@@ -6885,7 +7127,7 @@ GameObject:
   - component: {fileID: 1847414249}
   - component: {fileID: 1847414250}
   - component: {fileID: 1847414252}
-  - component: {fileID: 1847414251}
+  - component: {fileID: 1847414253}
   m_Layer: 5
   m_Name: CuerpoACuerpoJ1
   m_TagString: DropZone
@@ -6925,7 +7167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6962,6 +7204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 1847414253}
   zoneType: 0
 --- !u!114 &1847414250
 MonoBehaviour:
@@ -6989,19 +7232,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1847414251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847414245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoneType: M
 --- !u!61 &1847414252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7047,6 +7277,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1847414253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847414245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1850249207
 GameObject:
   m_ObjectHideFlags: 0
@@ -7060,8 +7302,8 @@ GameObject:
   - component: {fileID: 1850249211}
   - component: {fileID: 1850249210}
   - component: {fileID: 1850249209}
-  - component: {fileID: 1850249213}
   - component: {fileID: 1850249214}
+  - component: {fileID: 1850249215}
   m_Layer: 5
   m_Name: AsedioJ2
   m_TagString: DropZone
@@ -7111,7 +7353,7 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!114 &1850249210
@@ -7126,6 +7368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 1850249215}
   zoneType: 2
 --- !u!114 &1850249211
 MonoBehaviour:
@@ -7140,7 +7383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7165,19 +7408,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850249207}
   m_CullTransparentMesh: 1
---- !u!114 &1850249213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850249207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoneType: S
 --- !u!61 &1850249214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7223,6 +7453,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1850249215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850249207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1863365194
 GameObject:
   m_ObjectHideFlags: 0
@@ -7372,8 +7614,8 @@ GameObject:
   - component: {fileID: 1920448032}
   - component: {fileID: 1920448031}
   - component: {fileID: 1920448034}
-  - component: {fileID: 1920448035}
   - component: {fileID: 1920448036}
+  - component: {fileID: 1920448037}
   m_Layer: 5
   m_Name: AumentoAtaqueDistanciaJ2
   m_TagString: DropZone
@@ -7412,6 +7654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zone: {fileID: 1920448037}
   zoneType: 9
 --- !u!114 &1920448032
 MonoBehaviour:
@@ -7426,7 +7669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7470,26 +7713,13 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1920448035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920448029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd315330422e96b2a7ea3746c626ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoneType: I
 --- !u!61 &1920448036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7535,6 +7765,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1920448037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920448029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8e728191832ffd69d2de7ce9a937b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926978473
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,10 +7,11 @@ public class PlayerDeck : MonoBehaviour, IPointerClickHandler
     public GameObject cardPrefab;
     public Transform cardZone;
     public int maxCardsToDraw = 10;
-    public Player player; // Asume que player tiene una propiedad "Name" para identificar al jugador
+    public Player player;
 
-    private List<Card> deck = new List<Card>(); 
+    private List<Card> deck = new List<Card>();
     private int cardsDrawn = 0;
+    public bool canPlayCards = false;
 
     void Start()
     {
@@ -19,24 +20,19 @@ public class PlayerDeck : MonoBehaviour, IPointerClickHandler
 
     void ResetDeck()
     {
-        // Asegúrate de que la base de datos de cartas esté inicializada
         if (CardDataBase.cardList != null && CardDataBase.cardList.Count > 0)
         {
             Debug.Log("Card list is initialized with " + CardDataBase.cardList.Count + " cards.");
-            
-            // Llena el mazo con cartas filtradas por facción según el jugador
+
             if (player.Name == "Player1")
             {
-                // Jugador 1 solo toma cartas de Gryffindor
                 deck = CardDataBase.cardList.FindAll(card => card.CardFaction == Faction.Gryffindor);
             }
             else if (player.Name == "Player2")
             {
-                // Jugador 2 solo toma cartas de Slytherin
                 deck = CardDataBase.cardList.FindAll(card => card.CardFaction == Faction.Slytherin);
             }
-            
-            // Mezclar el mazo
+
             ShuffleDeck();
         }
         else
@@ -58,7 +54,7 @@ public class PlayerDeck : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (cardsDrawn < maxCardsToDraw)
+        if (canPlayCards && cardsDrawn < maxCardsToDraw)
         {
             if (deck.Count > 0)
             {
@@ -80,9 +76,13 @@ public class PlayerDeck : MonoBehaviour, IPointerClickHandler
                 Debug.LogError("No more cards in the deck.");
             }
         }
+        else if (!canPlayCards)
+        {
+            Debug.Log("No se pueden jugar cartas en este turno.");
+        }
         else
         {
-            Debug.Log("Card draw limit reached.");
+            Debug.Log("Límite de cartas dibujadas alcanzado.");
         }
     }
 
@@ -106,10 +106,8 @@ public class PlayerDeck : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        // Instancia el prefab de la carta
         GameObject cardObject = Instantiate(cardPrefab, cardZone);
-        
-        // Configura el componente CardComponent del prefab con los datos de la carta
+
         CardComponent cardComponent = cardObject.GetComponent<CardComponent>();
         if (cardComponent != null)
         {
@@ -120,14 +118,12 @@ public class PlayerDeck : MonoBehaviour, IPointerClickHandler
             Debug.LogError("CardComponent no encontrado en el prefab.");
         }
 
-        // Configura el componente CanvasGroup para la gestión de raycast y transparencia
         CanvasGroup canvasGroup = cardObject.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
         {
             canvasGroup = cardObject.AddComponent<CanvasGroup>();
         }
 
-        // Configura el componente CardDragHandler
         CardDragHandler dragHandler = cardObject.GetComponent<CardDragHandler>();
         if (dragHandler == null)
         {

@@ -9,6 +9,8 @@ public class CardComponent : MonoBehaviour
     public TextMeshProUGUI cardName;       
     public TextMeshProUGUI cardDescription; 
     public TextMeshProUGUI cardPower;    
+    public Unidad unitType;
+    public SpecialAbility ability;
 
     // Objeto de datos de la carta
     public Card cardData;
@@ -16,6 +18,9 @@ public class CardComponent : MonoBehaviour
     // Método para inicializar la carta con datos específicos
     public void Initialize(Card card)
     {
+        unitType=card.UnitType;
+        ability=card.Ability;
+
         cardData = card;    // Asignar los datos de la carta
         UpdateCardDisplay(); // Actualizar la visualización de la carta
     }
@@ -29,6 +34,7 @@ public class CardComponent : MonoBehaviour
             cardDescription.text = cardData.CardDescription; 
             cardPower.text = cardData.Power.ToString(); 
             cardImage.sprite = cardData.ThisImage; 
+
         }
     }
 }
