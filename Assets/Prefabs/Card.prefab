@@ -298,7 +298,6 @@ GameObject:
   - component: {fileID: 3755410738258644728}
   - component: {fileID: 4799625122977210660}
   - component: {fileID: 8462094866445195753}
-  - component: {fileID: 1314335564714849924}
   - component: {fileID: 1179777343777443575}
   - component: {fileID: -6341202362444588816}
   - component: {fileID: 1050389102788619784}
@@ -388,23 +387,19 @@ MonoBehaviour:
   cardName: {fileID: 484874113006959808}
   cardDescription: {fileID: 7659583438877210972}
   cardPower: {fileID: 1207043574961965458}
-  cardData: {fileID: 0}
---- !u!114 &1314335564714849924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4693585378356531392}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 255d0a314463aeae588961ac8597d574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 0}
-  cardZone: {fileID: 0}
-  maxCardsToDraw: 10
-  player: {fileID: 0}
+  unitType: 0
+  ability: 0
+  cardData:
+    Id: 0
+    CardName: 
+    Power: 0
+    CardDescription: 
+    ThisImage: {fileID: 0}
+    CardFaction: 0
+    Type: 0
+    Attack: 0
+    Ability: 0
+    UnitType: 0
 --- !u!114 &1179777343777443575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,6 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83993ea907eb3dd81b6a3d43ae683338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardPrefab: {fileID: 4693585378356531392}
 --- !u!1 &5309872246734644759
 GameObject:
   m_ObjectHideFlags: 0

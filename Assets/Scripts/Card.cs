@@ -25,7 +25,7 @@ public enum CardType
 
 public enum AttackType
 {
-    M, R, S, MR, MS, RS, MRS, C, L, I, DespejarClima, DevolverCarta
+    M, R, S, MR, MS, RS, MRS, C, L, I, DespejarClima, DevolverCarta, None
 }
 
 public enum SpecialAbility
@@ -54,7 +54,7 @@ public class Card
 {
     public int Id;
     public string CardName;
-    public int Power;
+    public int Power{ get; set; }
     public string CardDescription;
     public Sprite ThisImage;
     public Faction CardFaction;

@@ -645,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 154359935}
   zoneType: 0
 --- !u!114 &154359931
@@ -957,6 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 327928845}
   zoneType: 1
 --- !u!114 &327928841
@@ -1144,6 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 377612845}
   zoneType: 9
 --- !u!114 &377612844
@@ -2112,6 +2115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 0}
   zoneType: 9
 --- !u!114 &653488748
@@ -2133,8 +2137,8 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 1
@@ -2407,6 +2411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 664925687}
   zoneType: 7
 --- !u!114 &664925684
@@ -2639,6 +2644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 727503585}
   zoneType: 2
 --- !u!114 &727503583
@@ -2852,6 +2858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 749906719}
   zoneType: 9
 --- !u!114 &749906714
@@ -3346,6 +3353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 0}
   zoneType: 8
 --- !u!114 &953347389
@@ -3444,7 +3452,7 @@ GameObject:
   - component: {fileID: 1043810134}
   - component: {fileID: 1043810136}
   m_Layer: 5
-  m_Name: ZonaJ1
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3754,6 +3762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 1062321694}
   zoneType: 8
 --- !u!114 &1062321689
@@ -3973,6 +3982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 1099547592}
   zoneType: 1
 --- !u!114 &1099547590
@@ -4437,6 +4447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 0}
   zoneType: 9
 --- !u!114 &1168503648
@@ -4459,7 +4470,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 1
@@ -5048,14 +5059,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1779658880}
     m_Modifications:
-    - target: {fileID: 1314335564714849924, guid: e22af2d9a5a85267a9f5a1b639e2476a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1314335564714849924, guid: e22af2d9a5a85267a9f5a1b639e2476a, type: 3}
-      propertyPath: cardPrefab
-      value: 
-      objectReference: {fileID: 4693585378356531392, guid: e22af2d9a5a85267a9f5a1b639e2476a, type: 3}
     - target: {fileID: 4693585378356531392, guid: e22af2d9a5a85267a9f5a1b639e2476a, type: 3}
       propertyPath: m_Name
       value: Card
@@ -5758,6 +5761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 1491773595}
   zoneType: 9
 --- !u!114 &1491773590
@@ -6848,7 +6852,7 @@ GameObject:
   - component: {fileID: 1744839215}
   - component: {fileID: 1744839217}
   m_Layer: 5
-  m_Name: ZonaJ2
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6934,8 +6938,6 @@ MonoBehaviour:
   deck:
   - Id: 0
     CardName: 
-    Cost: 0
-    Power: 0
     CardDescription: 
     ThisImage: {fileID: 0}
     CardFaction: 0
@@ -7204,6 +7206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 1847414253}
   zoneType: 0
 --- !u!114 &1847414250
@@ -7368,6 +7371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 1850249215}
   zoneType: 2
 --- !u!114 &1850249211
@@ -7654,6 +7658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInZone: []
   zone: {fileID: 1920448037}
   zoneType: 9
 --- !u!114 &1920448032

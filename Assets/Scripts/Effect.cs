@@ -1,9 +1,17 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Effect : MonoBehaviour
 {
-    public void ApplyEffect(Card card)
+    DropZoneManager dropZoneManager;
+
+    void Start()
+    {
+        dropZoneManager = FindObjectOfType<DropZoneManager>();
+    }
+
+    public void ApplyEffect(Card card, DropZone dropZone)
     {
         switch (card.Ability)
         {
@@ -17,10 +25,10 @@ public class Effect : MonoBehaviour
                 ApplyCallWeather(card);
                 break;
             case SpecialAbility.RemoveHighestPower:
-                ApplyRemoveHighestPower(card);
+                ApplyRemoveHighestPower(card, dropZone);
                 break;
             case SpecialAbility.RemoveLowestPower:
-                ApplyRemoveLowestPower(card);
+                ApplyRemoveLowestPower(card, dropZone);
                 break;
             case SpecialAbility.DrawCard:
                 ApplyDrawCard(card);
@@ -58,49 +66,9 @@ public class Effect : MonoBehaviour
         }
     }
 
-    // Métodos específicos para cada efecto
-    private void ApplyNone(Card card){}
-    private void ApplyDecoyEffect(Card card)
-    {
-        // Verifica si la carta es un Decoy
-        if (card.Type != CardType.Decoy)
-        {
-            Debug.LogWarning("La carta no es un Decoy.");
-            return;
-        }
+    private void ApplyNone(Card card) { }
 
-        // Obtén la zona donde se colocó la carta Decoy
-        DropZone dropZone = FindObjectOfType<DropZone>();
-        if (dropZone != null)
-        {
-            List<CardComponent> cardsInZone = dropZone.GetCardsInZone();
-
-            // Filtra las cartas de tipo Unidad en la zona
-            List<CardComponent> unitCards = cardsInZone.FindAll(c => c.unitType == Unidad.Unidad);
-
-            if (unitCards.Count == 1)
-
-            {
-                CardComponent unitCard = unitCards[0];
-                ReturnCardToHand(unitCard);
-                //carta de tipo Unidad, devuélvela a la mano
-                Debug.Log("Devolviendo la carta de tipo Unidad a la mano.");
-                // Aquí  implementar la lógica para devolver la carta a la mano del jugador
-            }
-            else if (unitCards.Count > 1)
-            {
-                // Hay múltiples cartas de tipo Unidad, permite al jugador elegir
-                Debug.Log("Selecciona una carta de tipo Unidad para devolver.");
-                // Aquí implementar la lógica para permitir al jugador elegir una carta
-            }
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró DropZone.");
-        }
-    }
-
-
+    private void ApplyDecoyEffect(Card card) { }
 
     private void ApplyClearingEffect(Card card)
     {
@@ -112,14 +80,40 @@ public class Effect : MonoBehaviour
         Debug.Log("Aplicando efecto de CallWeather: " + card.CardName);
     }
 
-    private void ApplyRemoveHighestPower(Card card)
+    private void ApplyRemoveHighestPower(Card card, DropZone dropZone)
     {
         Debug.Log("Aplicando efecto de RemoveHighestPower: " + card.CardName);
+        // Llama al método para eliminar la carta con el mayor poder en la DropZone
+        if (dropZone != null)
+        {
+            List<CardComponent> cardsInZone = dropZone.GetAllCardsInZone();
+            if (cardsInZone.Count > 0)
+            {
+                CardComponent highestPowerCard = cardsInZone.OrderByDescending(c => c.cardData.Power).FirstOrDefault();
+                if (highestPowerCard != null)
+                {
+                    dropZone.RemoveCard(highestPowerCard);
+                }
+            }
+        }
     }
 
-    private void ApplyRemoveLowestPower(Card card)
+    private void ApplyRemoveLowestPower(Card card, DropZone dropZone)
     {
         Debug.Log("Aplicando efecto de RemoveLowestPower: " + card.CardName);
+        // Llama al método para eliminar la carta con el menor poder en la DropZone
+        if (dropZone != null)
+        {
+            List<CardComponent> cardsInZone = dropZone.GetAllCardsInZone();
+            if (cardsInZone.Count > 0)
+            {
+                CardComponent lowestPowerCard = cardsInZone.OrderBy(c => c.cardData.Power).FirstOrDefault();
+                if (lowestPowerCard != null)
+                {
+                    dropZone.RemoveCard(lowestPowerCard);
+                }
+            }
+        }
     }
 
     private void ApplyDrawCard(Card card)
@@ -166,26 +160,4 @@ public class Effect : MonoBehaviour
     {
         Debug.Log("Aplicando efecto de IncreaseRow: " + card.CardName);
     }
-
-    private void ReturnCardToHand(CardComponent card)
-    {
-        Player player = FindObjectOfType<Player>();
-        if (player != null)
-        {
-            if (card.unitType == Unidad.Unidad)
-            {
-                ///player.AddCardToHand(card);
-                //Debug.Log("Carta devuelta a la mano del jugador: " + card.CardName);
-            }
-            else
-            {
-                Debug.LogWarning("La carta seleccionada no es de tipo Unidad.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró el objeto Player en la escena.");
-        }
-    }
-
 }

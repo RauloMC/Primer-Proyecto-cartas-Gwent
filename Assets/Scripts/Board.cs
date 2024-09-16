@@ -126,7 +126,7 @@ public class Tablero : MonoBehaviour
     }
 
     // Obtiene la zona correspondiente a un nombre
-    private Transform ObtenerZona(string playerZone)
+    public Transform ObtenerZona(string playerZone)
     {
         if (zonas.TryGetValue(playerZone, out Transform zone))
         {

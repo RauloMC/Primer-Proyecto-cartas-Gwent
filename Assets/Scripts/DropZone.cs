@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler
 {
+    public Player player;
+    public List<CardComponent> cardsInZone = new List<CardComponent>();
     public Zone zone; // Referencia a la clase Zone
     public AttackType zoneType; // Tipo de zona asociado a este DropZone (M, R, S, etc.)
 
@@ -17,6 +19,20 @@ public class DropZone : MonoBehaviour, IDropHandler
         }
     }
 
+    public void AddCardToZone(CardComponent cardComponent)
+    {
+        if (cardComponent != null)
+        {
+            cardsInZone.Add(cardComponent); // Añadir la carta a la lista
+            Debug.Log("Carta añadida a la zona: " + cardComponent.cardData.CardName);
+            Debug.Log("Cantidad de cartas en la zona: " + cardsInZone.Count);
+        }
+        else
+        {
+            Debug.LogError("Intentaste añadir una carta nula.");
+        }
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop Triggered");
@@ -24,24 +40,20 @@ public class DropZone : MonoBehaviour, IDropHandler
         CardDragHandler draggableCard = eventData.pointerDrag.GetComponent<CardDragHandler>();
         if (draggableCard != null)
         {
-            Debug.Log("CardDragHandler found: " + draggableCard.gameObject.name);
-
             CardComponent cardComponent = draggableCard.GetComponent<CardComponent>();
+            AddCardToZone(cardComponent);
+
             if (cardComponent != null)
             {
-                Debug.Log("CardComponent found for: " + cardComponent.cardData.CardName);
-
                 if (CanPlaceCard(cardComponent))
                 {
-                    Debug.Log("Placing card: " + cardComponent.cardData.CardName + " in zone: " + zoneType);
                     draggableCard.transform.SetParent(transform);
                     draggableCard.transform.localPosition = Vector3.zero;
 
-                    Effect effectManager = FindObjectOfType<Effect>(); 
+                    Effect effectManager = FindObjectOfType<Effect>();
                     if (effectManager != null)
                     {
-                        Debug.Log("Effect Manager found. Applying effect.");
-                        effectManager.ApplyEffect(cardComponent.cardData); // Aquí deberías aplicar el efecto basado en cardData
+                        effectManager.ApplyEffect(cardComponent.cardData, this); // Pasar DropZone como parámetro
                     }
                     else
                     {
@@ -80,15 +92,14 @@ public class DropZone : MonoBehaviour, IDropHandler
         {
             zone.RemoveCard(cardComponent); // Remueve la carta de la zona usando el método de la clase Zone
         }
+
+        // También elimina la carta de la lista interna
+        cardsInZone.Remove(cardComponent);
     }
 
-    public List<CardComponent> GetCardsInZone()
+    public List<CardComponent> GetAllCardsInZone()
     {
-        if (zone != null)
-        {
-            return new List<CardComponent>(zone.GetCardsInZone()); // Devuelve una lista de CardComponent
-        }
-        return new List<CardComponent>(); // Devuelve una lista vacía si la zona no está definida
+        return new List<CardComponent>(cardsInZone); // Devuelve una lista de CardComponent
     }
 
     public void OnCardRemoved(CardComponent cardComponent)

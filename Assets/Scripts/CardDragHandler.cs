@@ -22,6 +22,11 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         canvasGroup.blocksRaycasts = false;    // Permitir que otros objetos detecten raycast
     }
 
+    public void OnDrop(PointerEventData eventData)
+    {
+        // Nota: No es necesario usar OnDrop para efectos, ya que OnEndDrag maneja el efecto.
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position; // Actualizar la posición de la carta al arrastrar
@@ -48,7 +53,7 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                         Effect effectManager = FindObjectOfType<Effect>(); // Encontrar el objeto Effect en la escena
                         if (effectManager != null)
                         {
-                            effectManager.ApplyEffect(cardComponent.cardData);
+                            effectManager.ApplyEffect(cardComponent.cardData, dropZone); // Pasar DropZone como parámetro
                         }
                         else
                         {
@@ -77,7 +82,6 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             transform.SetParent(originalParent);
         }
     }
-
 
     private bool IsPointerOverDropZone(PointerEventData eventData)
     {
