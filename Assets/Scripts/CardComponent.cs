@@ -11,6 +11,7 @@ public class CardComponent : MonoBehaviour
     public TextMeshProUGUI cardPower;    
     public Unidad unitType;
     public SpecialAbility ability;
+    public Faction faction;
 
     // Objeto de datos de la carta
     public Card cardData;
@@ -18,6 +19,7 @@ public class CardComponent : MonoBehaviour
     // Método para inicializar la carta con datos específicos
     public void Initialize(Card card)
     {
+        faction=card.CardFaction;
         unitType=card.UnitType;
         ability=card.Ability;
 

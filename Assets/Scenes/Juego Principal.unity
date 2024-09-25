@@ -645,6 +645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1744839217}
+  opponent: {fileID: 1043810136}
   cardsInZone: []
   zone: {fileID: 154359935}
   zoneType: 0
@@ -958,6 +960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1744839217}
+  opponent: {fileID: 1043810136}
   cardsInZone: []
   zone: {fileID: 327928845}
   zoneType: 1
@@ -1146,6 +1150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1043810136}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 377612845}
   zoneType: 9
@@ -2115,6 +2121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1043810136}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 0}
   zoneType: 9
@@ -2411,6 +2419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1043810136}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 664925687}
   zoneType: 7
@@ -2644,6 +2654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1043810136}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 727503585}
   zoneType: 2
@@ -2858,6 +2870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1744839217}
+  opponent: {fileID: 1043810136}
   cardsInZone: []
   zone: {fileID: 749906719}
   zoneType: 9
@@ -3353,6 +3367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1043810136}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 0}
   zoneType: 8
@@ -3530,6 +3546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030d5c74784aa7e0587c47fbb899d0fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faction: 0
+  cementery: {fileID: 2002014935}
   Name: Player1
   Photo: {fileID: 0}
   nameText: {fileID: 642645488}
@@ -3762,6 +3780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1744839217}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 1062321694}
   zoneType: 8
@@ -3982,6 +4002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1043810136}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 1099547592}
   zoneType: 1
@@ -4447,6 +4469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1043810136}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 0}
   zoneType: 9
@@ -5511,6 +5535,7 @@ GameObject:
   - component: {fileID: 1371901805}
   - component: {fileID: 1371901807}
   - component: {fileID: 1371901806}
+  - component: {fileID: 1371901808}
   m_Layer: 5
   m_Name: CementerioJ2
   m_TagString: Untagged
@@ -5575,6 +5600,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371901804}
   m_CullTransparentMesh: 1
+--- !u!114 &1371901808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371901804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6bbf9c35c45b6ccaaea86e5d84ba687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1484997197
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,6 +5798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1744839217}
+  opponent: {fileID: 1043810136}
   cardsInZone: []
   zone: {fileID: 1491773595}
   zoneType: 9
@@ -6930,6 +6969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030d5c74784aa7e0587c47fbb899d0fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faction: 1
+  cementery: {fileID: 1371901808}
   Name: Player2
   Photo: {fileID: 0}
   nameText: {fileID: 444720646}
@@ -7206,6 +7247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1043810136}
+  opponent: {fileID: 1744839217}
   cardsInZone: []
   zone: {fileID: 1847414253}
   zoneType: 0
@@ -7371,6 +7414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1744839217}
+  opponent: {fileID: 1043810136}
   cardsInZone: []
   zone: {fileID: 1850249215}
   zoneType: 2
@@ -7658,6 +7703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e82a3db60f9120fad0cbc45da2024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1744839217}
+  opponent: {fileID: 1043810136}
   cardsInZone: []
   zone: {fileID: 1920448037}
   zoneType: 9
@@ -8212,6 +8259,7 @@ GameObject:
   - component: {fileID: 2002014932}
   - component: {fileID: 2002014934}
   - component: {fileID: 2002014933}
+  - component: {fileID: 2002014935}
   m_Layer: 5
   m_Name: CementerioJ1
   m_TagString: Untagged
@@ -8276,6 +8324,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002014931}
   m_CullTransparentMesh: 1
+--- !u!114 &2002014935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002014931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6bbf9c35c45b6ccaaea86e5d84ba687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2011899780
 GameObject:
   m_ObjectHideFlags: 0
@@ -9048,6 +9108,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3496174115473605381, guid: 09be7803a73a56b70b707ff42fb24911, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6318469999282821948}
+    - targetCorrespondingSourceObject: {fileID: 3496174115473605381, guid: 09be7803a73a56b70b707ff42fb24911, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6318469999282821951}
   m_SourcePrefab: {fileID: 100100000, guid: 09be7803a73a56b70b707ff42fb24911, type: 3}
 --- !u!1 &6318469999282821944 stripped
 GameObject:
@@ -9085,6 +9148,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6318469999282821951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318469999282821944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6cd61f31e99ca71bf88410e6687908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsInHand: []
+  handTransform: {fileID: 6318469999282821945}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

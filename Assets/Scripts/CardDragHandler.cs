@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    
     private CanvasGroup canvasGroup;
     public Transform originalParent;
     public Vector3 originalPosition;

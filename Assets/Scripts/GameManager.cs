@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     // Paneles del tablero principal
     public GameObject player1Panel;
     public GameObject player2Panel;
@@ -24,6 +27,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        if(Instance == null){
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else{
+            Destroy(gameObject);
+        }
         // Asigna las referencias desde los paneles
         player1NameText = player1Panel.transform.Find("NombreJ1").GetComponent<TMP_Text>();
         player1Image = player1Panel.transform.Find("FotoJugador1").GetComponent<Image>();
@@ -37,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        InitializeDropZones();
         StartGame();
     }
 
@@ -67,6 +78,30 @@ public class GameManager : MonoBehaviour
         player2ScoreText.text = "Score: 0"; // Inicia la puntuación
     }
 
-   
+    public Dictionary<Player, List<DropZone>> playerDropZones = new Dictionary<Player, List<DropZone>>();
+    
+    private void InitializeDropZones()
+    {
+        // Inicializa las DropZones de los jugadores
+        playerDropZones[player1] = new List<DropZone>(FindDropZonesForPlayer(player1));
+        playerDropZones[player2] = new List<DropZone>(FindDropZonesForPlayer(player2));
+    }
+
+    private List<DropZone> FindDropZonesForPlayer(Player player)
+    {
+        // Encuentra todas las DropZones asociadas a un jugador específico
+        DropZone[] allDropZones = FindObjectsOfType<DropZone>();
+        List<DropZone> playerZones = new List<DropZone>();
+
+        foreach (DropZone dropZone in allDropZones)
+        {
+            if (dropZone.player == player) // Asocia las zonas con el jugador correspondiente
+            {
+                playerZones.Add(dropZone);
+            }
+        }
+
+        return playerZones;
+    }
 }
 

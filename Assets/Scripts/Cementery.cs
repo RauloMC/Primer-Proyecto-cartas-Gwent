@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 
-public class Cementery{
+using UnityEngine;
+
+public class Cementery : MonoBehaviour {
+    
+
     List<Card> cardsInCementery = new List<Card>();
 
     public void AddCardToCementery(Card card)

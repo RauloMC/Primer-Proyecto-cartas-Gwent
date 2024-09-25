@@ -5,10 +5,11 @@ using UnityEngine.EventSystems;
 public class DropZone : MonoBehaviour, IDropHandler
 {
     public Player player;
+    public Player opponent;
     public List<CardComponent> cardsInZone = new List<CardComponent>();
     public Zone zone; // Referencia a la clase Zone
     public AttackType zoneType; // Tipo de zona asociado a este DropZone (M, R, S, etc.)
-
+    private Cementery cementery;
     private void Start()
     {
         // Asignar la referencia a la clase Zone
@@ -24,8 +25,8 @@ public class DropZone : MonoBehaviour, IDropHandler
         if (cardComponent != null)
         {
             cardsInZone.Add(cardComponent); // Añadir la carta a la lista
-            Debug.Log("Carta añadida a la zona: " + cardComponent.cardData.CardName);
-            Debug.Log("Cantidad de cartas en la zona: " + cardsInZone.Count);
+            //Debug.Log("Carta añadida a la zona: " + cardComponent.cardData.CardName);
+            //Debug.Log("Cantidad de cartas en la zona: " + cardsInZone.Count);
         }
         else
         {
@@ -35,7 +36,7 @@ public class DropZone : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("OnDrop Triggered");
+        //Debug.Log("OnDrop Triggered");
 
         CardDragHandler draggableCard = eventData.pointerDrag.GetComponent<CardDragHandler>();
         if (draggableCard != null)
@@ -95,6 +96,11 @@ public class DropZone : MonoBehaviour, IDropHandler
 
         // También elimina la carta de la lista interna
         cardsInZone.Remove(cardComponent);
+
+        if(opponent != null)
+        {
+            opponent.cementery.AddCardToCementery(cardComponent.cardData);
+        }
     }
 
     public List<CardComponent> GetAllCardsInZone()
@@ -107,4 +113,10 @@ public class DropZone : MonoBehaviour, IDropHandler
         RemoveCard(cardComponent);
         // Aquí podrías manejar otras actualizaciones relacionadas con el retiro de cartas.
     }
+    public void InitializeDropZone(Player player, Player opponent)
+    {
+        this.player = player;
+        this.opponent = opponent;
+    }
+
 }

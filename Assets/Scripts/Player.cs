@@ -5,6 +5,8 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    public Faction faction;
+    public Cementery cementery;
     public string Name;
     public Sprite Photo;
     public TMP_Text nameText;
@@ -34,6 +36,25 @@ public class Player : MonoBehaviour
             Debug.Log("La mano está llena, no se puede añadir más cartas.");
         }
     }
+
+    public Player GetOpponentBasedOnCardFaction(Card card)
+    {
+
+        // Si la carta es de Gryffindor, el oponente es el jugador 2 (player2)
+        if (card.CardFaction == Faction.Gryffindor)
+        {
+            return GameManager.Instance.player2;
+        }
+        // Si la carta es de Slytherin, el oponente es el jugador 1 (player1)
+        else if (card.CardFaction == Faction.Slytherin)
+        {
+            return GameManager.Instance.player1;
+        }
+
+        Debug.LogError("Facción no válida o no definida.");
+        return null; // Devuelve null si no se encuentra un oponente válido
+    }
+
 
 
     public void DrawInitialCards()
@@ -115,6 +136,6 @@ public class Player : MonoBehaviour
     {
         return hand.Count;
     }
-
+    
     
 }
